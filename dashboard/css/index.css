@@ -1,0 +1,40 @@
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.ef input[type='text']:focus {
+	border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+#updateTeamName {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 30px;
+	font-family: "Noto Sans JP";
+	font-size: 120%;
+}
+
+p {
+	font-family: "Noto Sans JP";
+}
+
+@font-face {
+	font-family: "Noto Sans JP";
+	font-style: normal;
+	font-weight: 500;
+	src: url("font/NotoSansJP-Medium.woff") format("woff");
+}

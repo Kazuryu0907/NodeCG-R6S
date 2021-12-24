@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "pirulen";
+}
+
+.scoreboard {
+    position: relative;
+}
+
+.scoreboard div{
+    float:left;
+    font-weight: bold;
+    position:absolute;
+}
+
+.team-info {
+    color:white;
+    top:0px;
+    font-size:50px;
+    transform: translateY(-4px);
+}
+
+#teamBlue {
+    transform: translateX(-100%);
+    left:560px;
+}
+#scoreBlue {
+    left:815px;
+}
+
+#scoreOrange {
+    left:1062px;
+}
+
+#teamOrange {
+    left:1350px;
+}
+
+.bluePoint > div{
+    background: #ffd900;
+    width: 20px;
+    height: 50px;
+    text-align: center;
+    transform: skewX(42deg);
+    border-right: solid 3px #333;
+    border-left: solid 3px #333;
+}
+
+#blueP1 {
+    top:6px;
+    left:712px;
+}
+#blueP2 {
+    top:6px;
+    left:682px;
+}
+#blueP3 {
+    top:6px;
+    left:652px;
+}
+
+.scoreboard img {
+    width:100%;
+}
+
+.orangePoint > div{
+    background: #ffd900;
+    width: 20px;
+    height: 52px;
+    text-align: center;
+    transform: skewX(-42deg);
+    border-right: solid 3px #333;
+    border-left: solid 3px #333;
+}
+
+#orangeP1 {
+    top: 5px;
+    left:1184px;
+}
+
+#orangeP2 {
+    top: 5px;
+    left:1214px;
+}
+
+#orangeP3 {
+    top: 5px;
+    left:1244px;
+}
+
+.is-hidden{
+    visibility: hidden;
+}
+
+@font-face{
+    font-family: 'pirulen';
+    src: url('../src/fonts/pirulen\ rg.ttf')
+}

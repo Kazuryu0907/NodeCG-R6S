@@ -1,0 +1,52 @@
+{
+  "name": "my-first-bundle",
+  "version": "0.0.0",
+  "description": "test",
+  "homepage": "",
+  "author": {
+    "name": "Kazuryu0907",
+    "email": "41988990+Kazuryu0907@users.noreply.github.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "TeamName",
+        "width":"2",
+        "file": "html/teamname.html",
+        "headerColor": "#525F78",
+        "workspace": "R6S"
+      },
+      {
+        "name": "score",
+        "title": "Scores",
+        "width":"2",
+        "file": "html/scores.html",
+        "headerColor": "#525F78",
+        "workspace": "R6S"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": true
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="scoreboard">
+        <img src="ovly.png">
+        <div class="team-info">
+            <div class="team left">
+                <div class="name" id="teamBlue">unchi</div>
+                <div class="score" id="scoreBlue">0</div>
+                <div class="bluePoint">
+                    <div id="blueP1"></div>
+                    <div id="blueP2"></div>
+                    <div id="blueP3"></div>
+                </div>
+            </div>
+            <div class="team right">
+                <div class="score" id="scoreOrange">0</div>
+                <div class="name" id="teamOrange">ABBB</div>
+                <div class="orangePoint">
+                    <div id="orangeP1"></div>
+                    <div id="orangeP2"></div>
+                    <div id="orangeP3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script>
+		nodecg.Replicant("blueName").on("change",newValue => {
+			document.getElementById("teamBlue").innerText = newValue
+		})
+		nodecg.Replicant("orangeName").on("change",newValue => {
+			document.getElementById("teamOrange").innerText = newValue
+		})
+		//BLUE-------
+		const bluepoints = nodecg.Replicant("countblueP")
+		const orangepoints = nodecg.Replicant("countorangeP")
+		bluepoints.on("change",newValue => {
+			document.getElementById("scoreBlue").innerText = newValue
+			for(let i = 0;i<3;i++)document.getElementById("blueP"+String(i+1)).style.display = "none"
+			for(let i = 0;i<newValue;i++){
+				const id = "blueP"+String(i+1)
+				document.getElementById(id).style.display = "block"
+			}
+		})
+		//ORANGE-----
+		orangepoints.on("change",newValue => {
+			document.getElementById("scoreOrange").innerText = newValue
+			for(let i = 0;i<3;i++)document.getElementById("orangeP"+String(i+1)).style.display = "none"
+			for(let i = 0;i<newValue;i++){
+				const id = "orangeP"+String(i+1)
+				document.getElementById(id).style.display = "block"
+			}
+		})
+	</script>
+</body>
+</html>

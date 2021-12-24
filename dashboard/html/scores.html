@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/scores.css" type="text/css">
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="teams">
+        <div>BLUE</div>
+        <span id="blueP" class="num"></span>
+        <button id="bluepulse">+</button>
+        <div>ORANGE</div>
+        <span id="orangeP" class="num"></span>
+        <button id="orangepulse">+</button>
+        <div class="space"></div>
+        <button id="rst">reset</button>
+
+
+    </div>
+    <script>
+        const bluepoints = document.getElementById("bluepulse")
+        const countblueP = nodecg.Replicant("countblueP",{defaultValue: 0})
+        countblueP.on("change",newValue => {
+            document.getElementById("blueP").innerText = newValue
+        })
+        bluepoints.addEventListener("click",()=>{
+            countblueP.value += 1
+        })
+        const orangepoints = document.getElementById("orangepulse")
+        const countorangeP = nodecg.Replicant("countorangeP",{defaultValue: 0})
+        countorangeP.on("change",newValue => {
+            document.getElementById("orangeP").innerText = newValue
+        })
+
+        orangepoints.addEventListener("click",()=>{
+            countorangeP.value += 1
+        })
+
+        document.getElementById("rst").addEventListener("click",()=>{
+            nodecg.Replicant("countblueP").value = 0
+            nodecg.Replicant("countorangeP").value = 0
+        })
+    </script>
+
+    </body>
+</html>

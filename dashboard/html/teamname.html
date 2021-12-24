@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<html>
+	<body>
+		<div class="cp_iptxt">
+		<label class="ef">
+			<p>BLUE</p>
+			<input type="text" name="blue_text" id="blueName"></p>
+			<p>ORANGE</p>
+			<input type="text" name="orange_text" id="orangeName"></p>
+		</label>
+		</div>
+		<button id="updateTeamName">Submit</button>
+		<link rel="stylesheet" href="../css/index.css" type="text/css"/>
+		<script>
+
+			document.getElementById("updateTeamName").addEventListener("click",()=>{
+				const blueteamName = document.getElementById("blueName").value;
+				const orangeteamName = document.getElementById("orangeName").value;
+				nodecg.Replicant("blueName").value = blueteamName;
+				nodecg.Replicant("orangeName").value = orangeteamName;
+			});
+		</script>
+	</body>
+</html>

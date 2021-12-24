@@ -1,0 +1,32 @@
+* {
+    font-family: "Noto Sans JP";
+}
+
+button {
+	padding-left: 10px;
+	padding-right: 10px;
+    font-family: "Noto Sans JP";
+}
+
+#rst {
+    border-radius: 30px;
+}
+
+.teams > button {
+    font-size: 120%;
+}
+
+.teams > div {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+span {
+    padding: 10px 10px;
+}
+
+@font-face {
+	font-family: "Noto Sans JP";
+	font-style: normal;
+	font-weight: 500;
+	src: url("font/NotoSansJP-Medium.woff") format("woff");
+}
